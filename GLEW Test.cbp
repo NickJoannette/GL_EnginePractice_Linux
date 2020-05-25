@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GLEW Test" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="Shaders/;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/GLEW Test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectCompilerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/usr/include" />
+				</Compiler>
+				<Linker>
+					<Add library="/usr/lib/x86_64-linux-gnu/libglfw.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libGLEW.so.2.0" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libGLEW.so.2.0.0" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libglfw.so.3" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libGLEW.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libGL.so" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libassimp.so.4" />
+					<Add library="/usr/lib/x86_64-linux-gnu/libassimp.so.4.1.0" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/GLEW Test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="GLEW Test/BasicVertexGenerators.h" />
+		<Unit filename="GLEW Test/Camera.h" />
+		<Unit filename="GLEW Test/FixedFunctionRenderer.cpp" />
+		<Unit filename="GLEW Test/FixedFunctionRenderer.h" />
+		<Unit filename="GLEW Test/MasterRenderer.cpp" />
+		<Unit filename="GLEW Test/MasterRenderer.h" />
+		<Unit filename="GLEW Test/Mesh.h" />
+		<Unit filename="GLEW Test/Model.h" />
+		<Unit filename="GLEW Test/OpenGLWindow.cpp" />
+		<Unit filename="GLEW Test/OpenGLWindow.h" />
+		<Unit filename="GLEW Test/PowerTownSim.vcxproj.user" />
+		<Unit filename="GLEW Test/Rendering.h" />
+		<Unit filename="GLEW Test/Shader.h" />
+		<Unit filename="GLEW Test/SimpleGridOfSquares.cpp" />
+		<Unit filename="GLEW Test/SimpleGridOfSquares.h" />
+		<Unit filename="GLEW Test/Surface.cpp" />
+		<Unit filename="GLEW Test/Surface.h" />
+		<Unit filename="GLEW Test/TerrainRenderer.cpp" />
+		<Unit filename="GLEW Test/TerrainRenderer.h" />
+		<Unit filename="GLEW Test/main.cpp" />
+		<Unit filename="GLEW Test/stb_image.h" />
+		<Unit filename="Shaders/backgroundTextureShader.fs" />
+		<Unit filename="Shaders/backgroundTextureShader.vs" />
+		<Unit filename="Shaders/basicShader.fs" />
+		<Unit filename="Shaders/basicShader.vs" />
+		<Unit filename="Shaders/lightSourceShader.fs" />
+		<Unit filename="Shaders/lightSourceShader.vs" />
+		<Unit filename="Shaders/model_loading.fs" />
+		<Unit filename="Shaders/model_loading.vs" />
+		<Unit filename="Shaders/texturedCubeShader.fs" />
+		<Unit filename="Shaders/texturedCubeShader.vs" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
