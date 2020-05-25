@@ -501,7 +501,7 @@ int main() {
 
 
 #pragma region draw light source
-/*
+
 		glm::vec3 lightSourceColor = glm::vec3(1.0,1.0,1.0);
         glm::mat4 lightSourceModel = glm::mat4(1);
 		glm::mat4 lightSourceTransform = glm::mat4(1);
@@ -637,25 +637,31 @@ int main() {
 		glDisableVertexAttribArray(1);
 		glDisableVertexAttribArray(0);
 		glBindVertexArray(0);
-*/
+
 
         // Draw the desk model
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+       // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
 		modelLoadingShader.use();
         glEnableVertexAttribArray(0);
 		glEnableVertexAttribArray(1);
 		glEnableVertexAttribArray(2);
         modelLoadingShader.setMat4("view", view);
         glm::mat4 model = glm::mat4(1);
+        model = glm::translate(model, glm::vec3(0.5,0.5,0));
+
         modelLoadingShader.setMat4("model", model);
 		modelLoadingShader.setMat4("projection", projection);
         std::cout << "M Meshes: " << m.meshes.size() << std::endl;
 
+        modelLoadingShader.setVec3("testColor",glm::vec3(0.34,0.14,0.14));
         m.Draw(modelLoadingShader);
 
         model = glm::mat4(1);
-        model = glm::translate(model, glm::vec3(0,0.76,0));
+        model = glm::translate(model, glm::vec3(0,1.26,0));
         modelLoadingShader.setMat4("model", model);
+        modelLoadingShader.setVec3("testColor",glm::vec3(0.8));
         m2.Draw(modelLoadingShader);
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
